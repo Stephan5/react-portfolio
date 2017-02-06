@@ -1,15 +1,16 @@
+
 const projectsData = {
   data: [
     {
-      desktop_image: 'http://wallup.net/wp-content/uploads/2015/12/240881-waterfall-forest-colorful-nature-Thailand-trees-landscape-pink-turquoise-white-tropical-river-pond-leaves-736x459.jpg',
+      desktop_image: "../assets/starling/starling-bg.png",
       mobile_image: 'http://2.bp.blogspot.com/_o0sizlWlquE/SU_4cOXI3zI/AAAAAAAAAHo/aLUJ-5Oq_yI/s400/Color_Chart.jpg',
-      title: 'Project Title',
+      title: 'Starling Developers',
       date: '2016',
-      github_url: 'https://github.com/',
+      github_url: 'https://developer.starlingbank.com/',
       project_url: 'https://github.com/',
       background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      tech_stack: ['React.js', 'socket.io', 'Redux', 'PostgreSQL', 'Node.js', 'express']
+      role: 'Built the site from scratch, from the design to the client-side implementation.',
+      tech_stack: ['React.js', 'Redux', 'Node.js']
     }
   ]
 };
