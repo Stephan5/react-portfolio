@@ -4,7 +4,7 @@ export default class Footer extends Component {
   render() {
     const { personalInfo } = this.props;
     return (
-      <footer>
+      <footer className="footer">
         <span id="footer-text-wrap">
         Built by {personalInfo.name}.
         </span>

@@ -16,5 +16,5 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-
+console.log(process.env.port || 5000);
 app.listen(process.env.PORT || 5000);

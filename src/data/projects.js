@@ -7,9 +7,9 @@ const projectsData = {
       title: 'Starling Developers',
       date: '2016',
       github_url: 'https://developer.starlingbank.com/',
-      project_url: 'https://github.com/',
+      project_url: 'https://github.com/s',
       background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      role: 'Built the site from scratch, from the design to the client-side implementation.',
+      role: 'Lorem ipsum',
       tech_stack: ['React.js', 'Redux', 'Node.js']
     }
   ]

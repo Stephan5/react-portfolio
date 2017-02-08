@@ -5,9 +5,9 @@ import * as BenchmarkActions from '../actions/BenchmarkActions';
 import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Construction from '../components/Construction';
 import Statistics from '../components/Statistics';
 import { startTime } from '../index';
-
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
  * Again, this is because it serves to wrap the rest of our application with the Provider
@@ -15,23 +15,24 @@ import { startTime } from '../index';
  */
 export class App extends Component {
   componentDidMount() {
-    const { actions } = this.props;
-    actions.updateBenchmark(new Date().getTime() - startTime);
+    // const { actions } = this.props;
+    // actions.updateBenchmark(new Date().getTime() - startTime);
   }
 
   render() {
     const { projects, benchmark, personalInfo } = this.props;
-    const projectEntries = projects.map((project, index) => {
-      return <Project key={index} project={project} />;
-    });
+    // const projectEntries = projects.map((project, index) => {
+    //   return <Project key={index} project={project} />;
+
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
-        <Header personalInfo={personalInfo} />
-        <Statistics benchmark={benchmark} />
-        <div className="main-app-nav">Selected Projects</div>
+        {/*<Header personalInfo={personalInfo} />*/}
+        {/*<Statistics benchmark={benchmark} />*/}
+        {/*<div className="main-app-nav">Selected Projects</div>*/}
         {/* notice that we then pass those unpacked props into the Counter component */}
-          {projectEntries}
+          {/*{projectEntries}*/}
+        <Construction/>
         <Footer personalInfo={personalInfo} />
       </div>
     );

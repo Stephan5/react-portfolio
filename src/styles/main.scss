@@ -17,7 +17,7 @@ $color-silver: #c5c5c5;
 $color-silver-dark: #b4b4b4;
 
 $header-text-color: white;
-$header-background-color: rgba(165, 32, 244, 0.9);
+//$header-background-color: $color-silver-dark;
 
 $statistics-background-color: $color-snow;
 $statistics-color: $accent-black;
@@ -210,11 +210,19 @@ footer {
   }
 }
 
+#underConstruction.grid {
+  margin: 0 auto;
+  vertical-align: middle;
+  width: 1000px !important;
+}
+
+
+
 .header {
-  background-color: $header-background-color;
+  //background-color: $header-background-color;
   /* remove the gradient */
   background-image: none !important;
-  box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
+  //box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
   padding-top: 10px;
 }
 
@@ -289,4 +297,8 @@ ul.nav{
   @media only screen and (max-device-width: 600px) {
     font-size: 3rem;
   } 
+}
+
+.footer {
+  margin-bottom: 20px
 }
