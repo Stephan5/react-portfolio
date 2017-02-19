@@ -15,6 +15,8 @@ cp -r dist static
 mkdir prod
 cd prod
 cp -r ../static .
+cp -r ../index.html
+cp -r ../error.html
 cd ..
 
 # push to s3 some how
