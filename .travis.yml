@@ -1,6 +1,25 @@
 language: node_js
 node_js:
-  - 'node'
-  - '0.12'
-  - '0.10'
-  - 'iojs'
+- node
+- '0.12'
+- '0.10'
+- iojs
+branches:
+  only:
+  - master
+  - under-construction
+script:
+- yarn run build
+deploy:
+  provider: s3
+  bucket: blakeslee.uk
+  skip_cleanup: true
+  region: eu-west-2
+  local_dir: _site
+  on:
+    branch: under-construction
+  dot_match: true
+  access_key_id:
+    secure: S20SZb2Bv+tovKyDLOqayircRyvBEezav+7iwUkF1iimsJz4y+T0/vDxc3XZmnapbzEn8/WRFWWVOT4oU4qK3seJcq4Bnu5iG43ezVVfX44B89b1lDKaZamrQTfwe1Oy/t9X2VjIkV9jSocGQZ2oQKLc3MY3gzLAX5g4r1wJzY4ZMae4jrxzrB0OVYADhPKajLIm9nqFXRw9l9Dzj2wRKpDTWWFcdNE9CKrZ75+Kszxrq7JgdjY3XNgbFLRkG/NYYV5gdkIG7c9kWkXscrndCa8linJy0WjwbFqfQlw6g5bcEZXB/1vm/aB4SgUwp5yDipzbCl+M6wY76uT6EOBiE+T83l83ugWTj1UW+x5DxBFYUf1W9aWJvSH8QPsmcHYSisbYrodcyQ2DE3F8685T3mJoEJNewMiq8hUhWwtNlaPI6r7ro8edN9FRS7dDEYwVyWSqVtcPtF2e4ER850aLXSRDk7VoWh5PmcKtEFUIaBzl5frqOYxzzC1wcBsQSK7jgfUKRTnmDkfjyjJxrvBkqD8ppJPNX+MQ6SIZLwUCgYqgvODQHWecD1yPGRwxZP7CtkquFFqLk7v2X9TRhRnz8//ysXniWQFz5LDbY3nfeqX65Ynh5JNgp0p/kPww5eVZ4PFBFopGrDqCkOBk/MMabNx+aAN48m8+VIDJqiv2acw=
+  secret_access_key:
+    secure: QXa/lEbIRbeYaKZcVGgj7BhRFmW1rg4BLAidvzDKAEkLIYAXdbhnGJwsqy5kmfYrBRfz65vB3sy8hdL1gCMovmQ1wNe7094Ieuhp8CtdQoyDnWwy/yrPOiLdoXaTJtX1ww7VRTBtXrzEdcaykxga2aOH4iiB+n3q1Bgac4V+P2zHZhNoP5taUS9JFe+HPdGU5e82J/nnUaJ805x9dMx4ABcGQ1tSEsMj24nIrPI244im+zH+Kg6fy6WMY7mWjA2IzMKIhSVfq5Oo6djzO0tvznsyTLy+7/ml71Dte8Oj5vh//VG3dxLnugFqtQQfRvANyIBScgNHklyxsgxU61d3z02XELLh6ftelP7YVRwZHEqDdtRHq4FSUcGuGRmtqMCTNhpe2UqXJgtseq+JQ9Xah63OMCQcMqG10bhZHPhFnST3vokHGK91Dyby6gFjLdqgUGuPNKCWnJ8DJqt34rdv+ZAYddWt00jCeUjOMFb4+MjcKNIPoDBvMpv3L+8RkGfAqqEpdB4173nAYonMA+K8jATi3///wt/QeRLqrClZvZV9UmLhuVqAi1xOpXdx1ITdCSzNXgD5hXxZw2A1UdxKLVviJhlxVNB3EfAd1j1lVhIGZfFJ7eE/bab99E2Yes65IISffDpbgH1SHizF1pTjGpEXxJwcV5UScXBqAMOWaw0=
