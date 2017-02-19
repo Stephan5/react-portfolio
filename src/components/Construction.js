@@ -1,7 +1,27 @@
 import React, {Component} from 'react';
 import {Icon, Grid, Button, Header, Segment, Menu, Image, Progress} from "semantic-ui-react"
-export default class Footer extends Component {
+
+export default class Construction extends Component {
+
+  constructor () {
+    super();
+    this.state = {
+      percent: 10,
+    }
+  }
+
+ percentChange (percent) {
+    console.log(percent);
+    if (percent <= 90) {
+      this.setState({percent: this.state.percent + 5})
+    } else {
+      this.setState({percent: this.state.percent - 85})
+    }
+  };
+
   render () {
+
+  window.setTimeout(() => this.percentChange(this.state.percent), 1000);
     const {personalInfo} = this.props;
     return (
       <div>
@@ -12,7 +32,7 @@ export default class Footer extends Component {
             Site under construction
           </Header>
           <div>
-            <Progress percent="40" indicating color='teal'/>
+            <Progress percent={this.state.percent} indicating color='teal'/>
           </div>
         </Segment>
       </Grid>
