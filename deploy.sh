@@ -4,10 +4,6 @@
 # if the working directory is not clean (in git terms).
 
 # install dependencies and run build
-rm -rf dist
-rm -rf static
-rm -rf prod
-yarn install
 yarn build
 
 #copy dist folder and name 'static'
@@ -19,9 +15,3 @@ cp -r ../static .
 cp -r ../index.html .
 cp -r ../error.html .
 cd ..
-
-# push to s3 some how
-
-# cleanup
-rm -rf dist/
-rm -rf static/
