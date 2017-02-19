@@ -3,12 +3,6 @@
 # Performs a release of a new version of the site. This script will fail
 # if the working directory is not clean (in git terms).
 
-#clean and build semantic ui
-rm -rf semantic
-cd semantic
-gulp build
-cd ..
-
 # install dependencies and run build
 rm -rf dist
 rm -rf static
