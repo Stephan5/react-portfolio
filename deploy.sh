@@ -6,6 +6,7 @@
 # install dependencies and run build
 rm -rf dist
 rm -rf static
+rm -rf prod
 yarn install
 yarn build
 
@@ -15,8 +16,8 @@ cp -r dist static
 mkdir prod
 cd prod
 cp -r ../static .
-cp -r ../index.html
-cp -r ../error.html
+cp -r ../index.html .
+cp -r ../error.html .
 cd ..
 
 # push to s3 some how

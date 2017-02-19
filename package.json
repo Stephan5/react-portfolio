@@ -17,7 +17,6 @@
   "license": "MIT",
   "homepage": "https://github.com/tsaiDavid/simple-redux-boilerplate",
   "devDependencies": {
-    "css-loader": "^0.23.1"
   },
   "dependencies": {
     "autoprefixer": "^6.3.1",

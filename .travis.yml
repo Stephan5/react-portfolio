@@ -1,23 +1,27 @@
 language: node_js
 node_js:
 - node
-- '0.12'
-- '0.10'
 - iojs
 branches:
   only:
   - master
   - under-construction
 script:
-- yarn run build
+  - source ./deploy.sh
 deploy:
-  provider: s3
-  access_key_id: AKIAIOLHHR4EPMW3TBLQ
-  secret_access_key:
-    secure: ouay2626N4U9/xmxL+KfCQli/hz7b2cuJbXLixeih0E4DG9Zb+EnSI/MTC4PLeXWto4YOqbeb4fbdbShMFDtc70TwLIqaqa8dj8cHoxXsCv0vF93YhP3mtbmxpfcUQOF/ymlnZsPbw+b69H77zjmr/YoNkNAYl56y/ETlqxVcezXjaeFfeBwGNJVdedr909IFz32fjwp9/Ea9EdeYBcwRabVcjfnB2L9NxkJcu97iuP3aaKlx9mAtMwpYA9+5diXeDjURp7Fh81oboj4Vzn7xBfi64b3nf2013IHC0SDnf4Dj8BBNYY70l8kQWpgGYRIkDiAGS7AUYm4WPjGoyL94W/14itlkIWBFWVC13Wzb+MV3FahEGSHpU2YkU8/iZ3jl5yXv2Y63YL2hytkPe/FaQfNRmOlCnmF7nuPDDINpaUFdAShJzn9kGLrG13r8xU8PIgHX4uQjJh2ELJLpWK8csWhET2X3Ga6XX5PjTiKq/LY2YqgdW4Fnp47J9OTXS5gOOSNJyOov/Lr0F0Uh/jsHLdzHLrrmm+IQFwsfwZB+9JVmqw8sEi5fYPZKlcoSE52cgljIMOLdbsqlhlcRY24LdlfxplUDSFnJnEteJW9FH0FGgiG0HiErbvin21oiKTAAyewBVRUPVj7yrDbEKiw5D4noIwvCFpJExWdd5oCaXc=
-  bucket: blakeslee.uk
-  local-dir: prod
-  acl: ''
+  # Control deployment by setting a value for `on`. Setting the `branch`
+  # option to `master` means Travis will only attempt a deployment on
+  # builds of your repo's master branch (e.g., after you merge a PR).
   on:
-    repo: Stephan5/react-portfolio
     branch: under-construction
+  provider: s3
+  # You can refer to environment variables from Travis repo settings!
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  # Name of the S3 bucket to which your site should be uploaded.
+  bucket: blakeslee.uk
+  region: eu-west-2
+  # Prevent Travis from deleting your built site so it can be uploaded.
+  skip_cleanup: true
+  # Path to a directory containing your built site.
+  local_dir: prod
