@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Stephan5/react-portfolio.svg?branch=under-construction)](https://travis-ci.org/Stephan5/react-portfolio)
+
 # Customizable portfolio website using React.js
 
 This project is a personal website/portfolio starter. It includes all of the boilerplate code necessary for setting up React with Webpack, and has a beautiful, responsive design. 
