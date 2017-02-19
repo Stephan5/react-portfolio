@@ -135,7 +135,7 @@ footer {
 #underConstruction.grid {
   margin: 0 auto;
   vertical-align: middle;
-  width: 1000px !important;
+  max-width: 600px !important;
 }
 
 
@@ -233,4 +233,9 @@ ul.nav{
 .ui.menu .item>img:not(.ui) {
 margin: 0;
   width: 40px;
+}
+
+#iconBar.ui.grid>* {
+  padding: 0;
+
 }

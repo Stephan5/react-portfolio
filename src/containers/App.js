@@ -5,6 +5,7 @@ import * as BenchmarkActions from '../actions/BenchmarkActions';
 import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Construction from '../components/Construction'
 import Statistics from '../components/Statistics';
 import { startTime } from '../index';
 /**
@@ -27,13 +28,7 @@ export class App extends Component {
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div>
-        <Header personalInfo={personalInfo} />
-        <div className="main-app-container">
-        {/*<Statistics benchmark={benchmark} />*/}
-        <div className="main-app-nav">Selected Projects</div>
-         notice that we then pass those unpacked props into the Counter component
-          {projectEntries}
-        </div>
+        <Construction personalInfo={personalInfo}/>
         <Footer personalInfo={personalInfo} />
       </div>
     );

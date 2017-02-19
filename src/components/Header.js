@@ -3,45 +3,6 @@ import {Menu, Icon, Image} from 'semantic-ui-react'
 import FontAwesome from 'react-fontawesome'
 import logo from "../assets/stephan5-logo.png"
 
-// export default class Header extends Component {
-//   render () {
-//     return (
-//       <nav className="navbar navbar-fixed-top navbar-inner header">
-//
-//         <div className="container">
-//           <div className="navbar-brand">
-//             <a href="#"> {personalInfo.name} </a>
-//           </div>
-//           <ul className="nav navbar-nav pull-right">
-//             <li>
-//               <a href={personalInfo.resume} className="nav-link" target="_blank" style={{lineHeight: 'normal'}}>
-//                 <span>CV</span>
-//               </a>
-//             </li>
-//             <li>
-//               <a href={personalInfo.email} className="nav-link">
-//                 <FontAwesome name="envelope"/>
-//               </a>
-//             </li>
-//             <li>
-//               <a href={personalInfo.github} className="nav-link" target="_blank">
-//                 <FontAwesome name="github"/>
-//
-//               </a>
-//             </li>
-//             <li>
-//               <a href={personalInfo.linkedIn} className="nav-link" target="_blank">
-//                 <FontAwesome name="linkedin"/>
-//               </a>
-//             </li>
-//           </ul>
-//         </div>
-//       </nav>
-//     );
-//   }
-// }
-
-
 const onClick = (e, {name}) => {
   this.setState({activeItem: name});
 };
