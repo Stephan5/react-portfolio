@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { iconsData } from '../../data/techStackIcons';
+import { Header, Grid, Image } from 'semantic-ui-react'
 
 export default class TechStackItem extends Component {
   constructor(props, context) {
@@ -11,10 +12,10 @@ export default class TechStackItem extends Component {
 
     if (iconsData[tech]) {
       return (
-        <div>
-          {tech}
-          <img className="tech-icon" src={iconsData[tech]} />
-        </div>
+      <Grid.Column>
+        <Image className="tech-icon" src={iconsData[tech]} />
+        {tech}
+      </Grid.Column>
       );
     } else {
       return (

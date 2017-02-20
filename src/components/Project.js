@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import Mobile from './projectComponents/Mobile.js';
 import TechStackItem from './projectComponents/TechStackItem';
+import { Header, Image, Grid } from 'semantic-ui-react'
+
 
 export default class Project extends Component {
   constructor(props, context) {
@@ -9,12 +11,22 @@ export default class Project extends Component {
 
   render() {
     const { project } = this.props;
+
     const techStackItems = project.tech_stack.map((tech, index) => {
       return <TechStackItem key={index} tech={tech}/>;
     });
 
     return (
       <div className="project-container">
+        <a href={project.project_url} target="_blank">
+          <Header as='h2'>
+            {project.logo ? <Image shape='circular' src={project.logo} />: null}
+            <Header.Content>
+            {' '} Starling Developers
+            </Header.Content>
+          </Header>
+        </a>
+        <br/>
         <div className="image-container" >
           <div className="screenshot-container">
             <img src={project.desktop_image}/>
@@ -22,19 +34,22 @@ export default class Project extends Component {
           </div>
         </div>
         <div className="project-info">
-          <a href={project.project_url} target="_blank">
-            <h2>{project.title}</h2>
-          </a>
-          <a href={project.github_url} target="_blank">
-            {project.github_url !== '' ? 'Github' : null}
-          </a>
+          <Header>{project.title}</Header>
+          <a href="https://www.starlingbank.com">Starling Bank</a>
+          {project.github_url ? <a href={project.github_url} target="_blank">
+              {project.github_url !== '' ? 'Github' : null}
+            </a> : null}
           <div>{project.date}</div>
           <h3>Background</h3>
           <div>{project.background}</div>
           <h3>Role</h3>
           <div>{project.role}</div>
           <h3>Tech Stack</h3>
-          <div className="tech-icon-container">{techStackItems}</div>
+          <Grid textAlign="center" columns={techStackItems.length} divided centred>
+            <Grid.Row>
+            {techStackItems}
+            </Grid.Row>
+          </Grid>
         </div>
       </div>
     );

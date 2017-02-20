@@ -8,7 +8,10 @@ import Header from '../components/Header';
 import Construction from '../components/Construction'
 import Statistics from '../components/Statistics';
 import { startTime } from '../index';
+import { Menu } from 'semantic-ui-react'
+
 /**
+ *
  * It is common practice to have a 'Root' container/component require our main App (this one).
  * Again, this is because it serves to wrap the rest of our application with the Provider
  * component to make the Redux store available to the rest of the app.
@@ -20,15 +23,19 @@ export class App extends Component {
   }
 
   render() {
+
+
     const { projects, benchmark, personalInfo } = this.props;
     const projectEntries = projects.map((project, index) => {
       return <Project key={index} project={project} />;
     });
-    //
-    // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div>
+        {/*<Header  personalInfo={personalInfo}/>*/}
+{/*<div className="main-app-container">*/}
+      {/*{projectEntries}*/}
         <Construction personalInfo={personalInfo}/>
+{/*</div>*/}
         <Footer personalInfo={personalInfo} />
       </div>
     );

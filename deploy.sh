@@ -9,8 +9,8 @@ yarn build
 #copy dist folder and name 'static'
 cp -r dist static
 
-mkdir prod
-cd prod
+mkdir deploy
+cd deploy
 cp -r ../static .
 cp -r ../index.html .
 cp -r ../error.html .

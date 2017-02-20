@@ -11,11 +11,10 @@ export default class Construction extends Component {
   }
 
  percentChange (percent) {
-    console.log(percent);
     if (percent <= 90) {
-      this.setState({percent: this.state.percent + 5})
+      this.setState({percent: this.state.percent + 2})
     } else {
-      this.setState({percent: this.state.percent - 85})
+      this.setState({percent: 0})
     }
   };
 
