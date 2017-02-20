@@ -1,7 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
-@import url(https://fonts.googleapis.com/css?family=Bitter);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
 $main-bg-color: #EEE9E9;
 $accent-blue: #37bbe4;
@@ -27,7 +24,7 @@ body {
   color: $accent-black;
   display: flex;
   justify-content: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Lato", sans-serif !important;
   font-size: 1.6rem;
   margin-top: 65px;
   @media only screen and (max-device-width: 600px) {
@@ -223,7 +220,8 @@ ul.nav{
 }
 
 .footer {
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .vMiddle {

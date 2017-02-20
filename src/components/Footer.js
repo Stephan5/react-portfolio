@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-
+import { Segment, Divider, Header, Label } from 'semantic-ui-react'
 export default class Footer extends Component {
   render() {
     const { personalInfo } = this.props;
     return (
-      <footer className="footer" color="grey">
-        <span id="footer-text-wrap" color="grey">
-        Built by {personalInfo.name}
-        </span>
-      </footer>
+      <Segment basic className="footer">
+        <Divider />
+        <span><Header as="h4">Built by
+        <Label as='p' size="large" color="teal">
+          Stephan
+        </Label>
+        </Header></span>
+      </Segment>
     );
   }
 }
