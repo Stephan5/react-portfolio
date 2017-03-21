@@ -14,7 +14,7 @@ const projectsData = {
       background: 'The Starling Bank developer portal was built as a companion' +
       ' to Starling API, allowing developers to build apps on top of the platform.',
       role: 'Lead Javascript Developer and UX Designer',
-      tech_stack: ['React.js', 'Redux', 'Node.js']
+      tech_stack: ['React.js', 'Redux', 'Node.js', 'Express']
     }
   ]
 };
