@@ -32,6 +32,10 @@ body {
   }
 }
 
+.ui.teal.progress .bar {
+  background-color: #00B5AD !important;
+}
+
 h2 {
   @media only screen and (max-device-width: 600px) {
     font-size: 5rem;
