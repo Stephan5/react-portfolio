@@ -4,7 +4,7 @@
 # if the working directory is not clean (in git terms).
 
 # install dependencies and run build
-yarn build
+npm run build
 
 #copy dist folder and name 'static'
 cp -r dist static
