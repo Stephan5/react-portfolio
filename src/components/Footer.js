@@ -11,6 +11,7 @@ export default class Footer extends Component {
           Stephan
         </Label>
         </Header></span>
+        <p>v0.0.1 - b27</p>
       </Segment>
     );
   }
