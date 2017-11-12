@@ -5,6 +5,7 @@ lib
 coverage
 dist
 prod
+deploy
 /static
 .idea
 test/components/__snapshots__/
