@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Mobile from './projectComponents/Mobile.js';
 import TechStackItem from './projectComponents/TechStackItem';
 import { Header, Image, Grid } from 'semantic-ui-react'

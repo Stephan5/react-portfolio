@@ -3,9 +3,8 @@ const webpack = require('webpack');
 const bourbon = require('node-bourbon').includePaths;
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
-    'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client',
     './src/index'
   ],

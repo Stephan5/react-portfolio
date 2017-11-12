@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Mobile extends Component {
   constructor (props, context) {
@@ -6,14 +7,13 @@ export default class Mobile extends Component {
   }
 
   render () {
-    const {image} = this.props;
+    const { image } = this.props;
     return (
-      <div className="mobile-container hide-when-small">
-        <div className="iphone">
+      <div className='mobile-container hide-when-small'>
+        <div className='iphone'>
 
           <img src={image}/>
         </div>
-
 
       </div>
     );

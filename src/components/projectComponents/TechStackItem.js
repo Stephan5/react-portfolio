@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { iconsData } from '../../data/techStackIcons';
 import { Header, Grid, Image } from 'semantic-ui-react'
 

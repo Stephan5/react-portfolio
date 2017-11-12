@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class Introduction extends Component {
+class Introduction extends Component {
   render() {
     const { personalInfo } = this.props;
     return (
@@ -14,3 +15,5 @@ export default class Introduction extends Component {
 Introduction.propTypes = {
   personalInfo: PropTypes.object.isRequired
 };
+
+export default Introduction

@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
-import {Menu, Icon, Image} from 'semantic-ui-react'
-import FontAwesome from 'react-fontawesome'
-import logo from "../assets/stephan5-logo.png"
+import React, { Component } from 'react';
+import { Icon, Image, Menu } from 'semantic-ui-react';
+import logo from '../assets/stephan5-logo.png';
 
-const onClick = (e, {name}) => {
-  this.setState({activeItem: name});
+const onClick = (e, { name }) => {
+  this.setState({ activeItem: name });
 };
 
 export default class Header extends Component {
@@ -15,13 +14,13 @@ export default class Header extends Component {
   }
 
   render () {
-    const {activeItem} = this.state;
-    const {personalInfo} = this.props;
+    const { activeItem } = this.state;
+    const { personalInfo } = this.props;
 
     return (
       <Menu>
         <Menu.Item header>
-          <Image src={logo} width="40px" height="40px"/>
+          <Image src={logo} width='40px' height='40px'/>
         </Menu.Item>
 
         <Menu.Item
@@ -42,7 +41,7 @@ export default class Header extends Component {
           onClick={onClick}
         ><Icon name='eyedropper'/>Design</Menu.Item>
 
-        <Menu.Menu position="right">
+        <Menu.Menu position='right'>
           <Menu.Item
             href={personalInfo.email}><Icon name='mail'/>Contact</Menu.Item>
           <Menu.Item
@@ -56,6 +55,6 @@ export default class Header extends Component {
         </Menu.Menu>
       </Menu>
 
-    )
+    );
   }
 }
