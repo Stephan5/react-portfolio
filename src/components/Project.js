@@ -17,6 +17,8 @@ export default class Project extends Component {
       return <TechStackItem key={index} tech={tech}/>;
     });
 
+    const techStackColumns = techStackItems.length >= 5 ? 5 : techStackItems.length;
+
     return (
       <div className="project-container">
         <a href={project.project_url} target="_blank">
@@ -46,7 +48,7 @@ export default class Project extends Component {
           <h3>Role</h3>
           <div>{project.role}</div>
           <h3>Tech Stack</h3>
-          <Grid textAlign="center" columns={techStackItems.length} divided centred>
+          <Grid textAlign="center" columns={techStackColumns} divided centred>
             <Grid.Row>
             {techStackItems}
             </Grid.Row>

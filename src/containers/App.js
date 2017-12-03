@@ -6,7 +6,6 @@ import * as BenchmarkActions from '../actions/BenchmarkActions';
 import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Construction from '../components/Construction';
 import { startTime } from '../index';
 
 export class App extends Component {
@@ -23,12 +22,12 @@ export class App extends Component {
     });
     return (
       <div>
-        {/*<Header  personalInfo={personalInfo}/>*/}
-{/*<div className="main-app-container">*/}
-      {/*{projectEntries}*/}
-        <Construction personalInfo={personalInfo}/>
-{/*</div>*/}
-        <Footer personalInfo={personalInfo} />
+        <Header personalInfo={personalInfo}/>
+        <div className='main-app-container'>
+          {projectEntries}
+          {/*<Construction personalInfo={personalInfo}/>*/}
+        </div>
+        <Footer personalInfo={personalInfo}/>
       </div>
     );
   }
