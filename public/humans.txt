@@ -2,13 +2,9 @@
 
 /* TEAM */
 
-
 Stephan Blakeslee.
 
-
 contact: portfolio@blakeslee.uk
-
-
 
 Location: London, UK.
 
@@ -17,8 +13,6 @@ Location: London, UK.
 
 Standards: HTML5, CSS3, React, Redux, Webpack
 
-
 Components: Bootstrap
-
 
 Software: Webstorm

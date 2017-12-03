@@ -16,7 +16,6 @@ export default class Header extends Component {
   render () {
     const { activeItem } = this.state;
     const { personalInfo } = this.props;
-
     return (
       <Menu>
         <Menu.Item header>
@@ -26,32 +25,33 @@ export default class Header extends Component {
         <Menu.Item
           name='projects'
           active={activeItem === 'projects'}
-          onClick={onClick}
-        ><Icon name='rocket'/>Projects</Menu.Item>
+          onClick={onClick}>
+          <Icon name='rocket'/>Projects</Menu.Item>
 
         <Menu.Item
           name='technologies'
           active={activeItem === 'technologies'}
-          onClick={onClick}
-        ><Icon name='lab'/>Technologies</Menu.Item>
+          onClick={onClick}>
+          <Icon name='lab'/>Technologies</Menu.Item>
 
         <Menu.Item
           name='design'
           active={activeItem === 'design'}
-          onClick={onClick}
-        ><Icon name='eyedropper'/>Design</Menu.Item>
+          onClick={onClick}>
+          <Icon name='eyedropper'/>Design</Menu.Item>
 
         <Menu.Menu position='right'>
-          <Menu.Item
-            href={personalInfo.email}><Icon name='mail'/>Contact</Menu.Item>
-          <Menu.Item
-            href={personalInfo.github}><Icon name='github alternate'/>Github</Menu.Item>
-
-          <Menu.Item
-            href={personalInfo.linkedIn}><Icon name='linkedin'/>LinkedIn</Menu.Item>
-
-          <Menu.Item
-            href={personalInfo.cv}><Icon name='file text'/> CV </Menu.Item>
+          <Menu.Item href={personalInfo.email}>
+            <Icon name='mail'/>Contact</Menu.Item>
+          <Menu.Item href={personalInfo.github}>
+            <Icon name='github alternate'/>Github
+          </Menu.Item>
+          <Menu.Item href={personalInfo.linkedIn}>
+            <Icon name='linkedin'/>LinkedIn
+          </Menu.Item>
+          <Menu.Item href={personalInfo.cv}>
+            <Icon name='file text'/>CV
+          </Menu.Item>
         </Menu.Menu>
       </Menu>
 

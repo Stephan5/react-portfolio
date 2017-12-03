@@ -7,9 +7,7 @@ module.exports = class Root extends Component {
     const { store } = this.props;
     return (
       <Provider store={store}>
-        <div>
           <App/>
-        </div>
       </Provider>
     );
   }

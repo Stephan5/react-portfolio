@@ -7,6 +7,7 @@ import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { startTime } from '../index';
+import Construction from '../components/Construction';
 
 export class App extends Component {
   componentDidMount () {
